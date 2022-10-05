@@ -111,9 +111,12 @@ public class C04자료형 {
 		//------------------------------------
 		//String : 클래스자료형..- 객체지향 파트에서 다시 설명
 		
-		String name = "홍길동";
-		String job = "프로그래머";
+		String name = "홍길동";	//참조변수 name에는
+								//문자열이 저장된 위치값(메모리주소)가 저장
+		String job = "프로그래머";		
+		
 		System.out.println(name);
+		System.out.printf("%x\n", System.identityHashCode(name));
 		System.out.println(job);
 		
 		
