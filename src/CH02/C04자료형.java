@@ -93,11 +93,32 @@ public class C04자료형 {
 		//------------------------------------
 		//char 2byte 문자 저장 자료형 
 		
-		char ch1 = 'A';
-		char ch2 = '가';
-		System.out.println(ch1);
-		System.out.printf("%c\n", ch1);
-		System.out.printf("%d\n", (int)ch1);
+//		char ch1 = 'A';
+//		char ch2 = '가';
+//		short ch3 = 'A';	//약 -3000 
+//		short ch4= (short)'가';		//범위
+//		System.out.println(ch1);
+//		System.out.printf("%c\n", ch1);
+//		System.out.printf("%d\n", (int)ch1);
+//		System.out.println(ch4);
+//		System.out.println((int)ch2);
+//		
+//		int n1=44032;
+//		System.out.printf("%d %c\n", n1,n1);	// 숫자,문자로 각각 표현
+//		System.out.printf("%c\n",'\uACA2');		// \\u : 유니코드 적용 서식문자
+		//------------------------------------
+		// 문자열 : String
+		//------------------------------------
+		//String : 클래스자료형..- 객체지향 파트에서 다시 설명
+		
+		String name = "홍길동";
+		String job = "프로그래머";
+		System.out.println(name);
+		System.out.println(job);
+		
+		
+		
+		
 		
 		
 	}
