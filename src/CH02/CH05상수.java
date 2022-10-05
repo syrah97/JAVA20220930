@@ -17,6 +17,15 @@ public class CH05상수 {
 		//f,F : float 자료형
 		
 		
+		//심볼릭 상수 예제
+		int n1 = 100;
+		final int n2 = 200;	// n2 심볼릭 상수
+		
+		n1=300; //가능
+		//n2=400; //불가능
+		final double PI = 3.14;
+		double result = PI*4*4; //r * r * 3.14
+		
 
 	}
 
