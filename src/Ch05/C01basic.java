@@ -3,14 +3,13 @@ package Ch05;
 public class C01basic {
 	public static void main(String[] args) {
 ////	기본 산술 연산자
-//		int a = 10, b = 20, c;
-//		System.out.println("a+b="+ (a + b));
-//		System.out.println("a-b="+ (a - b));
-//		System.out.println("a*b="+ (a * b));
-//		System.out.println("b/a="+ (b / a)); //나누기 - 몫을 구하는 작업
-//		System.out.println("a+b="+ (a + b)); 
-//		System.out.println("a%%b="+ (a % b));//나누기 - 나머지를 구하는 작업(1.짝홀수구분,2.배수구분,3.자리수제한,4.끝자리구하기)
-//		System.out.println("-a="+ -a);
+		int a = 10, b = 20, c;
+		System.out.println("a+b="+ (a + b));
+		System.out.println("a-b="+ (a - b));
+		System.out.println("a*b="+ (a * b));
+		System.out.println("b/a="+ (b / a)); //나누기 - 몫을 구하는 작업		
+		System.out.println("a%%b="+ (a % b));//나누기 - 나머지를 구하는 작업(1.짝홀수구분,2.배수구분,3.자리수제한,4.끝자리구하기)
+		System.out.println("-a="+ -a);
 
 		//문제	
 //		두수를 입력 받아 두수의 합/차/곱을 출력하는 프로그램을 만들어보세요
