@@ -29,18 +29,34 @@ public class C01basic {
 //		System.out.println("a="+a);
 		
 		
+		
 		////비교연산자
-		int a =10;
-		int b=20;
-		System.out.println("A == B : "+ (a == b));
-		System.out.println("A  > B : "+ (a > b));
-		System.out.println("A  < B : "+ (a < b));
-		System.out.println("A >= B : "+ (a >= b));
-		System.out.println("A <= B : "+ (a <= b));
-		System.out.println("A != B : "+ (a != b));
+//		int a =10;
+//		int b=20;
+//		System.out.println("A == B : "+ (a == b));
+//		System.out.println("A  > B : "+ (a > b));
+//		System.out.println("A  < B : "+ (a < b));
+//		System.out.println("A >= B : "+ (a >= b));
+//		System.out.println("A <= B : "+ (a <= b));
+//		System.out.println("A != B : "+ (a != b));
 
 		
+		
 		////논리연산자 
+		//AND 연산자	&& : (true)&&(true) = true , 그외는 거짓
+		//- &&기호를 기준으로 왼/오른쪽 둘다 true 이면 true
+		//OR 연산자	|| : t||t=t, t||f=t, f||t=t, f||f=f
+		//- ||기호를 기준으로 왼/오른쪽 중 하나만 true 이면 true
+		//! 연산자
+		//- true이면 false, false 이면 true
+//		int a=10;int b=20;
+//		System.out.println((a>=b)&&(a>5));
+//		System.out.println((a!=b)&&(b>15));
+//		
+//		System.out.println((a>=b)||(a>5));
+//		System.out.println((a!=b)||(b>15));
+//		System.out.println((a==b)||(a<=5));
+		
 //		System.out.println("false AND false = " + (true && true));
 //		System.out.println("false AND true = " + (false && true));
 //		System.out.println("true AND false = " + (true && false));
@@ -62,10 +78,12 @@ public class C01basic {
 
 	
 		////증감연산자
-//		int a = 10, b = 10, c, d;
-//		c = --a;
-//		d = a--;
-//		System.out.printf("a=%d , b=%d , c=%d, d=%d", a, b, c, d);
+		//++a(--a) : 전치 연산자 : 먼저 값 1증가(1감소) 이후 다른 연산자 처리
+		//a++(a--) : 후치 연산자 : 다른 연산자 처리 먼저 한후 1증가(1감소)
+		int a = 10, b = 10, c, d;
+		c = --a;
+		d = a--;
+		System.out.printf("a=%d , b=%d , c=%d, d=%d", a, b, c, d);
 		
 	
 				
