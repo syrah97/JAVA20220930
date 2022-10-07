@@ -7,9 +7,9 @@ public class C01basic {
 //		System.out.println("a+b="+ (a + b));
 //		System.out.println("a-b="+ (a - b));
 //		System.out.println("a*b="+ (a * b));
-//		System.out.println("b/a="+ (b / a));
-//		System.out.println("a+b="+ (a + b));
-//		System.out.println("a%%b="+ (a % b));
+//		System.out.println("b/a="+ (b / a)); //나누기 - 몫을 구하는 작업
+//		System.out.println("a+b="+ (a + b)); 
+//		System.out.println("a%%b="+ (a % b));//나누기 - 나머지를 구하는 작업(1.짝홀수구분,2.배수구분,3.자리수제한,4.끝자리구하기)
 //		System.out.println("-a="+ -a);
 
 		//문제	
