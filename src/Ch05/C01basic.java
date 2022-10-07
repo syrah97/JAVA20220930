@@ -80,17 +80,46 @@ public class C01basic {
 		////증감연산자
 		//++a(--a) : 전치 연산자 : 먼저 값 1증가(1감소) 이후 다른 연산자 처리
 		//a++(a--) : 후치 연산자 : 다른 연산자 처리 먼저 한후 1증가(1감소)
-		int a = 10, b = 10, c, d;
-		c = --a;
-		d = a--;
-		System.out.printf("a=%d , b=%d , c=%d, d=%d", a, b, c, d);
+//		int a = 10, b = 10, c, d;
+//		c = --a;
+//		d = a--;
+//		System.out.printf("a=%d , b=%d , c=%d, d=%d", a, b, c, d);
 		
 	
 				
 		////삼항연산자
-//		int score = 85;
-//		char grade = (score > 90) ? 'A' : ((score > 80) ? 'B' : 'C');
-//		System.out.println(score + "점은 " + grade + "등급입니다.");
+		int score = 85;
+		char grade = (score > 90) ? 'A' : ((score > 80) ? 'B' : 'C');
+		System.out.println(score + "점은 " + grade + "등급입니다.");
+		
+		
+		
+		
+//		강제형변화
+//		산술연산 형변환
+//
+//		입력
+//		Scanner
+//
+//		연산자
+//
+//		산술(%)
+//
+//		대입(=.==)
+//
+//		복합대입 x
+//
+//		[조건식]
+//		(a>b && c>d && e>f)
+//		(a>b || c>d || e>f)
+//		비교
+//		논리
+//
+//		증감
+//		++a(먼저 값 증가 -> 다른)
+//		a++(다른 -> 값증가)
+		
+		
 	}
 }
 
