@@ -71,7 +71,7 @@ public class C01IF {
 		//문제
 		// 정수 한개값을 입력받아 3의 배수이면 해당 수를 출력하세요
 		
-		/*
+		
 		int num=0;
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력:");
@@ -80,7 +80,7 @@ public class C01IF {
 		{
 			System.out.println(num + " 는 3의 배수 입니다");
 		}
-		*/
+		
 		
 		//문제
 		// 두수를 입력받아 두수 중에 큰수를 출력
