@@ -14,11 +14,27 @@ public class C01IF {
 		{
 			System.out.println("학교에 다닙니다");
 		}
-		
+		System.out.println("첫번째 IF 블럭 종료");
 		if(age <8)
 		{
 			System.out.println("학교에 다니지 않습니다");
 		}
+		System.out.println("두번째 IF 블럭 종료");
+		System.out.println("프로그램을 종료합니다");
+		*/
+		
+		/*
+		int age = 7;
+		if(age >=8)
+		{
+			System.out.println("학교에 다닙니다");
+		}
+		else
+		{
+			System.out.println("학교에 다니지 않습니다");
+		}
+		System.out.println("두번째 IF 블럭 종료");
+		System.out.println("프로그램을 종료합니다");
 		*/
 		
 		//IF - ELSE
