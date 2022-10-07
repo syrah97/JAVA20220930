@@ -17,10 +17,12 @@ public class C02PercentArith {
 		/*
 		Scanner sc = new Scanner(System.in);
 		  
-		System.out.print("숫자를 입력하세요 : "); int num1 = sc.nextInt();
+		System.out.print("숫자를 입력하세요 : "); 
+		int num1 = sc.nextInt();
 		  
 		
-		int num1=11; String result = (num1%2==0)?"짝수입니다":"홀수입니다";
+		int num1=11; 
+		String result = (num1%2==0)?"짝수입니다":"홀수입니다";
 		System.out.println("결과 : " +result);
 		 */
 
