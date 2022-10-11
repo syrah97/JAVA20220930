@@ -1,5 +1,7 @@
 package Ch06;
 
+import java.util.Scanner;
+
 public class C03ELSEIF {
 
 	public static void main(String[] args) {
@@ -7,6 +9,40 @@ public class C03ELSEIF {
 		// 90점이상 : A				x >= 90
 		// 80 이상 90점 미만 : B		80<=x<90
 		// 70 이상 80점 미만 : C		70<=x<80
+		
+		
+		// 국어(40점) / 영어(40점) / 수학(40점)
+		// 국어<40 - 불합격
+		// 영어<40 - 불합격
+		// 수학<40 - 불합격
+		// 평균<60 - 불합격
+		//그외 : 합격
+//		Scanner sc=new Scanner(System.in);
+//		int kor=sc.nextInt(), eng=sc.nextInt(), mat=sc.nextInt();
+//		double avg=(double)(kor+eng+mat)/3;
+//		
+//		if(kor<40)
+//		{
+//			System.out.println("불합격");
+//		}
+//		else if(eng<40)  //kor>=40
+//		{
+//			System.out.println("불합격");
+//		}
+//		else if(mat<40)  //kor>=40 && eng>=40
+//		{
+//			System.out.println("불합격");
+//		}
+//		else if(avg<60) //kor>=40 && eng>=40 && mat>=40
+//		{
+//			System.out.println("불합격");
+//		}
+//		else
+//		{
+//			System.out.println("합격");
+//		}
+		
+		
 		
 		/*
 		int num=85;
@@ -62,25 +98,59 @@ public class C03ELSEIF {
 		//20세미만 : 요금은 2500원
 		//20세이상 : 요금은 3000원
 		
-		int age=10;
+//		Scanner sc=new Scanner(System.in);
+//		int age=sc.nextInt();
+//		
+//		if(age<8)
+//		{
+//			System.out.println("요금은 1000원");
+//		}
+//		else if(age<14)
+//		{
+//			System.out.println("요금은 2000원");
+//		}
+//		else if(age<20)
+//		{
+//			System.out.println("요금은 2500원");
+//		}
+//		else
+//		{
+//			System.out.println("요금은 3000원");
+//		}
+			
 		
-		if(age<8)
-		{
-			
-		}
-		else if(age<14)
-		{
-			
-		}
-		else if(age<20)
-		{
-			
-		}
-		else
-		{
-			
-		}
-			
+	//시험점수를 입력받아 90~100점은A,
+	//80~89점은B, 70~79점은C,60~69점은D,
+	//나머지 점수는 F를 출력하는 프로그램을 작성하시오.
+	
+	Scanner sc=new Scanner(System.in);
+	System.out.print("시험점수 : ");
+	int test=sc.nextInt();
+	
+	if(test>90)
+	{
+		System.out.printf("A");
+	}
+	else if(test>80)
+	{
+		System.out.printf("B");
+	}
+	else if(test>70)
+	{
+		System.out.printf("C");
+	}
+	else if(test>60)
+	{
+		System.out.printf("D");
+	}
+	else
+	{
+		System.out.printf("F");
+	}
+		
+	
+
+		
 
 	}
 
