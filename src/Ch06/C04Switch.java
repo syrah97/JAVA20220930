@@ -20,6 +20,8 @@ public class C04Switch {
 			medalColor = 'C';
 		}
 		System.out.println(ranking + " 등 메달의 색은 "+medalColor + " 입니다.");
+		
+		//Switch문은 break가 필수!!
 	
 	}
 

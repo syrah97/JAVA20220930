@@ -100,7 +100,7 @@ public class C03ELSEIF {
 		
 //		Scanner sc=new Scanner(System.in);
 //		int age=sc.nextInt();
-//		
+		
 //		if(age<8)
 //		{
 //			System.out.println("요금은 1000원");
@@ -117,35 +117,79 @@ public class C03ELSEIF {
 //		{
 //			System.out.println("요금은 3000원");
 //		}
-			
+		
+		//or
+//		int charge=0;
+//		if(age<8)
+//		{
+//			charge=1000;
+//		}
+//		else if(age<14)
+//		{
+//			charge=2000;
+//		}
+//		else if(age<20)
+//		{
+//			charge=2500;
+//		}
+//		else
+//		{
+//			charge=3000;
+//		}
+//		System.out.printf("나이 : %d 요금 : %d\n", age,charge);
+		
+		
+	//문제
 		
 	//시험점수를 입력받아 90~100점은A,
 	//80~89점은B, 70~79점은C,60~69점은D,
 	//나머지 점수는 F를 출력하는 프로그램을 작성하시오.
+		
+	// 점수 >= 90 A
+	// 점수 >= 80 B
+	// 점수 >= 70 C
+	// 점수 >= 60 D
+	// 그외 F
+	//or
+	// 점수 <60 F
+	// 점수 <70 D
+	// 점수 <80 C
+	// 점수 <90 B
+	// 그외 A
 	
+//	Scanner sc=new Scanner(System.in);
+//	System.out.print("시험점수 : ");
+//	int test=sc.nextInt();
+//	
+//	if(test>90){
+//		System.out.println("A");
+//	}else if(test>80)
+//	{
+//		System.out.println("B");
+//	}else if(test>70)
+//	{
+//		System.out.println("C");
+//	}else if(test>60)
+//	{
+//		System.out.println("D");
+//	}else
+//	{
+//		System.out.println("F");
+//	}
+		
 	Scanner sc=new Scanner(System.in);
-	System.out.print("시험점수 : ");
-	int test=sc.nextInt();
+	int score = sc.nextInt();
 	
-	if(test>90)
-	{
-		System.out.printf("A");
-	}
-	else if(test>80)
-	{
-		System.out.printf("B");
-	}
-	else if(test>70)
-	{
-		System.out.printf("C");
-	}
-	else if(test>60)
-	{
-		System.out.printf("D");
-	}
-	else
-	{
-		System.out.printf("F");
+	if(score >= 90) {
+		System.out.println("A");
+	}else if(score >= 80) {
+		System.out.println("B");
+	}else if(score >= 70) {
+		System.out.println("C");
+	}else if(score >= 60) {
+		System.out.println("D");
+	}else {
+		System.out.println("F");
 	}
 		
 	
