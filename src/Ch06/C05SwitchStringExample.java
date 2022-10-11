@@ -2,7 +2,7 @@ package Ch06;
 
 public class C05SwitchStringExample {
 	public static void main(String[] args) {
-		String position = "과장";
+		String position = "부장";
 		
 		switch(position) {
 			case "부장":
