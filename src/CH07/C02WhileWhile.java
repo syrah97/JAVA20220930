@@ -45,21 +45,21 @@ public class C02WhileWhile {
 		
 		
 //		//전체 구구단(2단-9단) 출력하기(단만 역순출력)
-				int dan=9;
-				while(dan>1)
-				{
-					int i = 9;
-					
-					System.out.printf(" --%d단--\n", dan);
-					
-					while (i>=1)
-					{
-						System.out.printf("%d X %d = %d\n", dan, i , dan * i);
-						i--;
-					}
-					System.out.printf("\n\n");
-					dan--;
-				}
+//				int dan=2;
+//				while(dan<=9)
+//				{
+//					int i = 9;
+//					
+//					System.out.printf(" --%d단--\n", dan);
+//					
+//					while (i>=1)
+//					{
+//						System.out.printf("%d X %d = %d\n", dan, i , dan * i);
+//						i--;
+//					}
+//					System.out.printf("\n\n");
+//					dan++;
+//				}
 				
 				
 		//전체 구구단(2단-9단) 출력하기(전체 역순출력)
