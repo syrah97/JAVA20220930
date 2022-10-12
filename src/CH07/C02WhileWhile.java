@@ -307,14 +307,48 @@ public class C02WhileWhile {
 		//	4		0-0		0-4
 		//	5		0-1		0-2
 		//	6		0-2		0-0
+//		int i=0;
+//		int j=0;
+//		int k=0;
+//		while(i<7)
+//		{
+//			if(i<4){	//j=0,k=0
+//				j=0;	//j<=2-i,k<=2*i
+//				while(j<=2-i){ //공백
+//					System.out.print(" ");
+//					j++;
+//				}
+//				k=0;
+//				while(k<=2*i){ //별
+//					System.out.print("*");
+//					k++;
+//				}
+//			}
+//			else{		//j=0,k=0
+//				j=0;	//j=<=i-4,k<6-2*(i-3)
+//				while(j<=i-4){ //공백
+//					System.out.print(" ");
+//					j++;
+//				}
+//				k=0;
+//				while(k<=12-(2*i)){ //별
+//					System.out.print("*");
+//					k++;
+//				}
+//			}
+//			System.out.println();
+//			i++;
+//		}
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
 		int i=0;
 		int j=0;
 		int k=0;
-		while(i<7)
+		while(i<=n)
 		{
-			if(i<4){	//j=0,k=0
+			if(i<(n/2)){	//j=0,k=0
 				j=0;	//j<=2-i,k<=2*i
-				while(j<=2-i){ //공백
+				while(j<=(n/2-1)-i){ //공백
 					System.out.print(" ");
 					j++;
 				}
@@ -326,12 +360,12 @@ public class C02WhileWhile {
 			}
 			else{		//j=0,k=0
 				j=0;	//j=<=i-4,k<6-2*(i-3)
-				while(j<=i-4){ //공백
+				while(j<=i-(n/2+1)){ //공백
 					System.out.print(" ");
 					j++;
 				}
 				k=0;
-				while(k<=6-2*(i-3)){ //별
+				while(k<=(n-1)*2-2*i){ //별
 					System.out.print("*");
 					k++;
 				}
@@ -339,6 +373,30 @@ public class C02WhileWhile {
 			System.out.println();
 			i++;
 		}
+
+		
+//		Scanner sc = new Scanner(System.in);
+//        int size;
+//        int n;
+//
+//        do {
+//            System.out.print("크기 ? ");
+//            size = sc.nextInt();
+//        } while (size < 1 || size > 10 || size % 2 == 0);
+//
+//        n = size / 2;
+//        for (int i = 0; i < size; i++) {
+//            for (int j = 0; j < (size - n); j++) {
+//                System.out.print((j >= n) ? "*" : " ");
+//            }
+//            n = i < (size / 2) ? n - 1 : n + 1;
+//            System.out.println();
+//        }
+//
+//        sc.close();
+	
+    
+		
 	}
 
 }
