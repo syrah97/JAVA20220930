@@ -314,24 +314,24 @@ public class C02WhileWhile {
 		{
 			if(i<4){	//j=0,k=0
 				j=0;	//j<=2-i,k<=2*i
-				while(j<=2-i){
+				while(j<=2-i){ //공백
 					System.out.print(" ");
 					j++;
 				}
 				k=0;
-				while(k<=2*i){
+				while(k<=2*i){ //별
 					System.out.print("*");
 					k++;
 				}
 			}
 			else{		//j=0,k=0
 				j=0;	//j=<=i-4,k<6-2*(i-3)
-				while(j<=i-4){
+				while(j<=i-4){ //공백
 					System.out.print(" ");
 					j++;
 				}
 				k=0;
-				while(k<=6-2*(i-3)){
+				while(k<=6-2*(i-3)){ //별
 					System.out.print("*");
 					k++;
 				}
