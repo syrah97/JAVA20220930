@@ -77,7 +77,9 @@ public class C04For {
 		
 		//별찍기
 		
-		//삼각형
+		//-사각형
+		
+		//-삼각형
 //		for(int i=0;i<=9;i++)
 //		{
 //			for(int j=0;j<=i;j++)
@@ -87,23 +89,51 @@ public class C04For {
 //			System.out.println();
 //		}
 		
-		//피라미드
-		for(int i=0;i<5;i++)
+		//-역삼각형
+		
+		//-피라미드
+//		for(int i=0;i<5;i++)
+//		{
+//			for(int j=0;j<=3-i;j++)
+//			{
+//				System.out.print(" ");
+//			}
+//			for(int k=0;k<=2*i;k++)
+//			{
+//				System.out.print("*");
+//			}
+//			System.out.println();
+//		}
+		
+		//-역피라미드
+		
+		//-다이아몬드
+		for(int i=0;i<7;i++)
 		{
-			for(int j=0;j<=3-i;j++)
+			if(i<4)
 			{
-				System.out.print(" ");
+				for(int j=0;j<=2-i;j++)
+				{
+					System.out.print(" ");
+				}
+				for(int k=0;k<=2*i;k++)
+				{
+					System.out.print("*");
+				}
 			}
-			for(int k=0;k<=2*i;k++)
+			else
 			{
-				System.out.print("*");
+				for(int j=0;j<=i-4;j++)
+				{
+					System.out.print(" ");
+				}
+				for(int k=0;k<=12-(2*i);k++)
+				{
+					System.out.print("*");
+				}
 			}
 			System.out.println();
 		}
-		
-		
-		
-		
 
 	}
 
