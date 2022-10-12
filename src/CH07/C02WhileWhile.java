@@ -339,6 +339,7 @@ public class C02WhileWhile {
 //			System.out.println();
 //			i++;
 //		}
+		//높이값 일력해서 출력
 		Scanner sc = new Scanner(System.in);
 		int n=sc.nextInt();
 		int i=0;
@@ -347,7 +348,7 @@ public class C02WhileWhile {
 		while(i<=n)
 		{
 			if(i<(n/2)){	//j=0,k=0
-				j=0;	//j<=2-i,k<=2*i
+				j=0;	//j<=(n/2-1)-i,k<=2*i
 				while(j<=(n/2-1)-i){ //공백
 					System.out.print(" ");
 					j++;
@@ -359,7 +360,7 @@ public class C02WhileWhile {
 				}
 			}
 			else{		//j=0,k=0
-				j=0;	//j=<=i-4,k<6-2*(i-3)
+				j=0;	//j<=i-(n/2+1),k<=(n-1)*2-2*i
 				while(j<=i-(n/2+1)){ //공백
 					System.out.print(" ");
 					j++;
@@ -374,7 +375,7 @@ public class C02WhileWhile {
 			i++;
 		}
 
-		
+		//예외문(do-while,for문)
 //		Scanner sc = new Scanner(System.in);
 //        int size;
 //        int n;
