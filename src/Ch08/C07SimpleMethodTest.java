@@ -18,7 +18,7 @@ public class C07SimpleMethodTest {
 
 			Sum calc = new Sum();	//Sum객체 생성 이후 calc 참조변수에 연결
 			
-			int r1 = calc.sum1(10,20);
+			int r1 = calc.sum1(10,20);	//calc객체의 sum1함수를 실행
 			System.out.println("sum1(x,y) = " + r1);
 
 	}
