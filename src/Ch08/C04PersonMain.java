@@ -27,7 +27,9 @@ public class C04PersonMain {
 		hong.age = 55;
 		hong.addr = "대구대구대구";
 		
-		System.out.printf("%s %d %s\n", hong.name,hong.age,hong.addr);
+		hong.talk();
+		hong.walk();
+		hong.ShowInfo();
 		
 
 	}
