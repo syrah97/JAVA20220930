@@ -5,25 +5,31 @@ import java.util.Scanner;
 class Sub{
 	
 	Scanner sc = new Scanner(System.in);
-	
+	// 속성
 	int sub1(int x, int y) {
-		return x+y;
+		if(x>y) {
+			return x+y;
+		}else
+		{
+			return y-x;
+		}
+		
 	}
 	
 	int sub2() {
 		int x = sc.nextInt();
 		int y = sc.nextInt();
-		return x+y;
+		return x-y;
 	}
 	
 	void sub3(int x,int y) {
-		System.out.println("sub3(x,y) = " + (x+y));
+		System.out.printf("%d - %d = %d\n",x,y,(y-x));
 	}
 	
 	void sub4() {
 		int x = sc.nextInt();
 		int y = sc.nextInt();
-		System.out.println("sub4() = " + (x+y));
+		System.out.printf("%d - %d = %d\n",x,y,(x-y));
 	}
 }
 
