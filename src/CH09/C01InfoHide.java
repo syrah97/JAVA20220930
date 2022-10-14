@@ -15,7 +15,7 @@ class C01Person
 	private float weight;	//몸무게
 	private double height;	//신장
 	private int salary;		//연봉
-	//생정자
+	//생성자
 	public C01Person(String name, String id, int age, float weight, double height, int salary) {
 		super();
 		this.name = name;
