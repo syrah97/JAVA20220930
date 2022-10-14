@@ -121,14 +121,14 @@ class Profile
 		//name,addr,job,major 와 일치 하면 true
 		//아니면 false 를 리턴
 		all=all.trim();
-		String tmp[] = all.split(",");	//[홍길동,대구,프로그래머,컴퓨터공학]
-		if(!name.equals(tmp[0])) {
+		String arr[] = all.split(",");	//[홍길동,대구,프로그래머,컴퓨터공학]
+		if(!name.equals(arr[0])) {
 			return false;
-		}else if(!addr.equals(tmp[1])) {
+		}else if(!addr.equals(arr[1])) {
 			return false;
-		}else if(!job.equals(tmp[2])) {
+		}else if(!job.equals(arr[2])) {
 			return false;
-		}else if(!major.equals(tmp[3])) {
+		}else if(!major.equals(arr[3])) {
 			return false;
 		}
 		return true;
@@ -141,7 +141,7 @@ class Profile
 public class StringClassPrac {
 
 	public static void main(String[] args) {
-		Profile hong = new Profile(" 홍길동,대구,프로그래머,컴퓨터공학");
+		Profile hong = new Profile(" , , , ");
 		
 		//멤버 내용 출력
 		System.out.println(hong.toString());
