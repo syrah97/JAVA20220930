@@ -23,39 +23,39 @@ class Profile
 	//3 다음 생성자 안 코드 처리하기
 	Profile(String all)		//String all="홍길동,대구,프로그래머,컴퓨터공학"
 	{ 
-		//->all문자열 앞뒤 공백은 제거(trim())		
-		all=all.trim();		//all="홍길동,대구,프로그래머,컴퓨터공학"
-		//->, 단위로 잘라내기(split(","))하여 각각의 값을
-		String tmp[] = all.split(",");	//tmp[] = ["홍길동,대구,프로그래머,컴퓨터공학"]
-		// tmp[0] == "홍길동", tmp[1] == "대구", tmp[2] == "프로그래머", tmp[3] == "컴퓨터공학"
-		//name,addr,job,major에 저장할것(안되면 강사와 함께..배열을 사용..)
-		name = tmp[0];
-		addr = tmp[1];
-		job = tmp[2];
-		major = tmp[3];	
+//		//->all문자열 앞뒤 공백은 제거(trim())		
+//		all=all.trim();		//all="홍길동,대구,프로그래머,컴퓨터공학"
+//		//->, 단위로 잘라내기(split(","))하여 각각의 값을
+//		String tmp[] = all.split(",");	//tmp[] = ["홍길동,대구,프로그래머,컴퓨터공학"]
+//		// tmp[0] == "홍길동", tmp[1] == "대구", tmp[2] == "프로그래머", tmp[3] == "컴퓨터공학"
+//		//name,addr,job,major에 저장할것(안되면 강사와 함께..배열을 사용..)
+//		name = tmp[0];
+//		addr = tmp[1];
+//		job = tmp[2];
+//		major = tmp[3];	
 		
 		//or
-//		Scanner sc = new Scanner(System.in);
-//		all = sc.nextLine();
-//		
-//		this.name = all;
-//		this.addr = all;
-//		this.job = all;
-//		this.major = all;
-//		
-//		System.out.println(all);
-//		System.out.println(all.trim());
-//		
-//		String arr[] = all.split(",");
-//		for(int i=0;i<arr.length;i++) {
-//			System.out.printf("arr[%d] = %s\n",i,arr[i]);
-//		}
+		Scanner sc = new Scanner(System.in);
+		all = sc.nextLine();
+		
+		
+		
+		String arr[] = all.split(",");
+		for(int i=0;i<arr.length;i++) {
+			System.out.printf("arr[%d] = %s\n",i,arr[i].trim());
+		}
+		this.name=arr[0];
+		this.addr=arr[1];
+		this.job=arr[2];
+		this.major=arr[3];
+		
+		
 	}
 	
 //	//4 toString() 재정의 코드 삽입
 	@Override
 	public String toString() {
-		return "Profile [name=" + name + ", addr=" + addr + ", job=" + job + ", major=" + major + "]";
+		return "Profile [name=" + name.trim() + ", addr=" + addr.trim() + ", job=" + job.trim() + ", major=" + major.trim() + "]";
 	}
 
 		
