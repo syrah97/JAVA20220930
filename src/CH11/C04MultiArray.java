@@ -12,9 +12,9 @@ public class C04MultiArray {
 		//길이 확인
 		System.out.println("arr2 의 행의 길이 :" + arr2.length);
 		System.out.println("arr2의 0번째 요소 길이 :" + arr2[0].length);
-		System.out.println("arr2의 1번쨰 요소 길이 :" + arr2[1].length);
+		System.out.println("arr2의 1번째 요소 길이 :" + arr2[1].length);
 		System.out.println("arr2의 2번째 요소 길이 :" + arr2[2].length);
-		System.out.println("arr2의 3번쨰 요소 길이 :" + arr2[3].length);
+		System.out.println("arr2의 3번째 요소 길이 :" + arr2[3].length);
 		
 	}
 
