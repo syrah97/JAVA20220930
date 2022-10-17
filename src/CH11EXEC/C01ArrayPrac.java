@@ -90,7 +90,7 @@ public class C01ArrayPrac {
 //		}
 //		avg=(double)sum/arr.length;
 //		
-//		System.out.printf("최대:%d\n최소:%d\n합:%d평균%f\n" ,max,min,sum,avg);
+//		System.out.printf("최대:%d\n최소:%d\n합:%d평균:%f\n" ,max,min,sum,avg);
 
 	}
 

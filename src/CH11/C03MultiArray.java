@@ -16,7 +16,7 @@ public class C03MultiArray {
 		
 		System.out.println("행 개수 : " + arr1.length);
 		System.out.println("0번 행의 열 개수 : " + arr1[0].length);
-		System.out.println("1번 행의 열 개수 : " + arr1[0].length);
+		System.out.println("1번 행의 열 개수 : " + arr1[1].length);
 		
 		//중첩 반복문
 		for(int i=0;i<arr1.length;i++) 
