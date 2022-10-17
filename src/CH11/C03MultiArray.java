@@ -15,6 +15,7 @@ public class C03MultiArray {
 		arr1[1][2]=33;
 		
 		System.out.println("행 개수 : " + arr1.length);
+		System.out.println("0번 행의 열 개수 : " + arr1[0].length);
 		//중첩 반복문
 		
 		
