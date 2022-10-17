@@ -13,6 +13,15 @@ public class C03MultiArray {
 		arr1[1][0]=11;
 		arr1[1][1]=22;
 		arr1[1][2]=33;
+		
+		System.out.println("행 개수 : " + arr1.length);
+		//중첩 반복문
+		
+		
+		
+		//개량 반복문
+		
+		
 	}
 
 }
