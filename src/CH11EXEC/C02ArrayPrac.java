@@ -31,16 +31,44 @@ public class C02ArrayPrac {
 			System.out.println(i+"번째 학생 총점 : " + std[i]);
 		}
 		//학생별 평균 구하기
+		int k=0, e=0, m=0, kAvg=0, eAvg=0, mAvg=0;
+		for(int i=0;i<score.length;i++) {
+			int sum=0,avg=0;
+			System.out.print(i+ 1 +"학생 점수 입력(국/영/수 순서)\n");
+			for(int j=0;j<score[i].length;j++) {
+				score[i][j] = sc.nextInt();
+				sum += score[i][j];
+				avg=sum/3;
+			}
+			k +=score[i][0];
+			e +=score[i][1];
+			m +=score[i][2];
+			kAvg=k/5;
+			eAvg=e/5;
+			mAvg=m/5;
+			
+			System.out.println(i + 1 + "학생총점" +sum);
+			System.out.println(i + 1 + "학생평균" +avg);
+			
+		}
+		System.out.println();
+		System.out.printf("국어 총점%d\n", k);
+		System.out.printf("영어 총점%d\n", e);
+		System.out.printf("수학 총점%d\n", m);
+		System.out.printf("국어 평균%d\n", kAvg);
+		System.out.printf("영어 평균%d\n", eAvg);
+		System.out.printf("수학 평균%d", mAvg);
+		
 		//생략
 		
 		
 		//과목별 총점 구하기
-		int subject[] = new int[3];//0 : 국어총점,1 : 영어총점,2 : 수학총점
-		for(int j=0;j<3;j++) {
-			for(int i=0;i<score.length;i++) {
-				subject[j]+=score[i][j];
-			}
-		}
+//		int subject[] = new int[3];//0 : 국어총점,1 : 영어총점,2 : 수학총점
+//		for(int j=0;j<3;j++) {
+//			for(int i=0;i<score.length;i++) {
+//				subject[j]+=score[i][j];
+//			}
+//		}
 		//과목별 평균 구하기
 		//셍략
 		
