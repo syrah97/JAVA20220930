@@ -29,7 +29,8 @@ package CH13EXEC;
 class ShopService{
 	//싱글톤 구현
 	private static ShopService instance;
-	private ShopService() {};
+	private ShopService() {
+	};
 	public static ShopService getInstance() {
 		if(instance==null)
 			instance=new ShopService();
