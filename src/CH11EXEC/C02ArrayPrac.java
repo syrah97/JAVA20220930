@@ -18,18 +18,18 @@ public class C02ArrayPrac {
 			}
 		}
 		//학생별 총점 구하기
-		int std[] = new int[5]; 
-		int cnt=0;
-		for(int tmp[] :score)
-		{			
-			for(int n:tmp) {
-				std[cnt]+=n;
-			}
-			cnt++;
-		}
-		for(int i=0;i<std.length;i++) {
-			System.out.println(i+"번째 학생 총점 : " + std[i]);
-		}
+//		int std[] = new int[5]; 
+//		int cnt=0;
+//		for(int tmp[] :score)
+//		{			
+//			for(int n:tmp) {
+//				std[cnt]+=n;
+//			}
+//			cnt++;
+//		}
+//		for(int i=0;i<std.length;i++) {
+//			System.out.println(i+"번째 학생 총점 : " + std[i]);
+//		}
 		//학생별 평균 구하기
 		int k=0, e=0, m=0, kAvg=0, eAvg=0, mAvg=0;
 		for(int i=0;i<score.length;i++) {
