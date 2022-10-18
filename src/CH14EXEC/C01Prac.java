@@ -11,7 +11,7 @@ class TV{
 
 class ColorTV extends TV{	
 	int color;
-	public ColorTV(int size,int color) {
+	public ColorTV(int size,int color) {		
 		super(size);
 		this.color=color;
 	}
