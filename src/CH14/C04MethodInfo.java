@@ -23,15 +23,16 @@ class Sub extends Super
 public class C04MethodInfo {
 
 	public static void main(String[] args) {
-		//정상범위
+		//정상범위(No Casting)
 		Super ob1 = new Super();
 		Super ob2 = new Super();
-		
 		Sub ob3 = new Sub();
 		
-		ob1.sound();
-		System.out.println();
+//		ob1.sound();
+//		System.out.println();
 		
+		//Upcasting(상위클래스 참조변수 = 하위객체)
+		Super ob4 = new Sub();
 
 	}
 
