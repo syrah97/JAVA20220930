@@ -14,16 +14,18 @@ class Person
 	//hashcode()재정의할것(Objects.hash()함수를 사용할 것)
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.name,this.age);
+		return Objects.hash(name,age);
 	}
 	//equals()재정의할 것(name과 age가 일치하면 true, 아니면 false)
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Person) {
 			Person down = (Person)obj;
-			return this.name==down.name && this.age==down.age;
+			return this.name.equals(down.name) && this.age==down.age;
+			
 		}
 		return false;
+		
 	}
 	//toString()재정의할 것(name,age가 출력)
 	@Override
