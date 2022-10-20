@@ -57,7 +57,8 @@ public class C03ObjectHashcode {
 		System.out.println("-------------------");
 		System.out.printf("%x\n", System.identityHashCode(obj1));
 		System.out.printf("%x\n", System.identityHashCode(obj2));
-		
+		System.out.println(obj1.equals(obj2));
+		System.out.println(obj2.equals(obj1));
 		
 	}
 
