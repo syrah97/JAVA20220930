@@ -9,6 +9,24 @@ interface Shape {
 	      draw();
 	   }
 	}
+class Circle implements Shape
+{
+	int r;
+	Circle(int num){
+		r=num;
+		draw();
+	}
+	@Override
+	public void draw() {
+		double result = getArea();
+		System.out.println("원의 넓이가 " + result + "인 원을 그립니다.");
+		
+	}
+	@Override
+	public double getArea() {
+		return r*r*PI;
+	}
+}
 public class C01Prac {
 
 	public static void main(String[] args) {
