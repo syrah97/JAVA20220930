@@ -1,7 +1,6 @@
 package CH20;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class C01List {
 
@@ -37,6 +36,13 @@ public class C01List {
 		}
 		
 		//삭제
+		System.out.println("---------------------");
+		list.remove(2);
+		for(String tmp : list)
+		{
+			System.out.println(tmp);
+		}
+		list.clear();
 	
 		
 	}
