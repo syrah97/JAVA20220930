@@ -10,13 +10,13 @@ public class C01NullPointerException {
 		} catch (NullPointerException e) {
 //			System.out.println("예외발생함!!");
 			System.out.println("------e.getCause()------");
-			System.out.println(e.getCause());		//원인 가져오기
-			System.out.println("------e.toString()------");
-			System.out.println(e.toString());		//예외객체 정보
-			System.out.println("------e.getStackTrace()------");
-			System.out.println(e.getStackTrace());	//예외객체 식별주소
-			System.out.println("------e.printStackTrace()------");
-			e.printStackTrace();					// 프로그램 종료전 예외발생정보 출력
+//			System.out.println(e.getCause());		//원인 가져오기
+//			System.out.println("------e.toString()------");
+//			System.out.println(e.toString());		//예외객체 정보
+//			System.out.println("------e.getStackTrace()------");
+//			System.out.println(e.getStackTrace());	//예외객체 식별주소
+//			System.out.println("------e.printStackTrace()------");
+			e.printStackTrace();					// 프로그램 종료전 예외발생정보 출
 		}
 
 		System.out.println("실행코드1");
