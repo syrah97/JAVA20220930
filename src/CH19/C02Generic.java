@@ -25,6 +25,9 @@ public class C02Generic {
 		Simple<Integer> ob1 = new Simple<Integer>(10,20);
 		ob1.ShowMember();
 		System.out.println();
+		
+		Simple<Person> ob2 = new Simple<Person>(new Person("홍길동","대구"),new Person("서길동","남해"));
+		ob2.ShowMember();
 
 	}
 
