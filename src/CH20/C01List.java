@@ -30,9 +30,15 @@ public class C01List {
 		for(int i=0;i<list.size();i++) {
 			System.out.println(list.get(i));
 		}
+		System.out.println("---------------------");
+		for(String tmp : list)
+		{
+			System.out.println(tmp);
+		}
 		
 		//삭제
-
+	
+		
 	}
 
 }
