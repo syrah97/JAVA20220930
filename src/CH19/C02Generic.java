@@ -12,6 +12,13 @@ class Simple<T>
 	}
 }
 
+class Person
+{
+	String name;
+	String addr;
+	Person(String name,String addr){this.name = name; this.addr = addr;}
+}
+
 public class C02Generic {
 
 	public static void main(String[] args) {
