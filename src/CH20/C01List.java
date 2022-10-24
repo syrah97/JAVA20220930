@@ -10,20 +10,26 @@ public class C01List {
 		List<String> list = new ArrayList();
 		
 		//추가
-		list.add("JAVA");
-		list.add("JDBC");
-		list.add("OracleDB");
-		list.add("JSP");
-		list.add("Servlet");
-		list.add("SpringFrameWork");
+		list.add("JAVA");			//0
+		list.add("JDBC");			//1
+		list.add("OracleDB");		//2
+		list.add("JSP");			//3
+		list.add("Servlet");		//4
+		list.add("SpringFrameWork");//5
+		list.add("JAVA");			//6
 		
 		
 		//확인(저장 수)
 		System.out.println("총 개체수 : " + list.size());
 		
 		//조회(요소)
+		System.out.println("확인 idx 2 : " + list.get(2));
+		System.out.println("---------------------");
 		
 		//전체 조회
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+		}
 		
 		//삭제
 
