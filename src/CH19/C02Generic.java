@@ -17,6 +17,11 @@ class Person
 	String name;
 	String addr;
 	Person(String name,String addr){this.name = name; this.addr = addr;}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", addr=" + addr + "]";
+	}
+	
 }
 
 public class C02Generic {
