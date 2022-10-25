@@ -14,7 +14,7 @@ public class C05FileInputStream {
 			if(data==-1) {
 				break;
 			}
-			System.out.println(data+" ");
+			System.out.println((char)data+" ");
 		}
 		
 	}
