@@ -6,12 +6,12 @@ public class C02NonBufferVsBufferExample {
 	public static void main(String[] args) throws Exception {
 		
 		//버퍼 미사용 스트림
-		String targetFilePath1 = "C:/Temp/20200722185055.png";
+		String targetFilePath1 = "C:/iotest/Cake.jpg";
 		FileInputStream fis = new FileInputStream(targetFilePath1);
 		FileOutputStream fos = new FileOutputStream(targetFilePath1);
 		
 		//버퍼 사용 스트림
-		String targetFilePath2 = "C:/Temp/20200722185056.png";
+		String targetFilePath2 = "C:/iotest/Cake.jpg";
 		FileInputStream fis2 = new FileInputStream(targetFilePath2);
 		FileOutputStream fos2 = new FileOutputStream(targetFilePath2);
 		BufferedInputStream bis = new BufferedInputStream(fis2);
