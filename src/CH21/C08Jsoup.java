@@ -13,7 +13,7 @@ public class C08Jsoup {
    public static void main(String[] args) throws Exception 
    {
       // URL과 연결된 Jsoup.connection
-      Connection conn = Jsoup.connect("https://www.musinsa.com/app/");      
+      Connection conn = Jsoup.connect("https://www.naver.com/");      
       
       //DOM 객체를 꺼내와 저장
       Document document = conn.get();
