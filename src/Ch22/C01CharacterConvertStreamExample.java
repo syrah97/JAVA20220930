@@ -15,11 +15,10 @@ public class C01CharacterConvertStreamExample {
 	public static void main(String[] args) throws Exception {
 		String str = "문자 변환 스트림 사용";
 		FileOutputStream fos = new FileOutputStream("C:/Temp/test1.txt");
-		fos.write(str);
-//		Writer writer = new OutputStreamWriter(fos);	//문자전송 보조스트림 (스트림->문자형변환) 
-//		writer.write(str);
-//		writer.flush();
-//		writer.close();
+		Writer writer = new OutputStreamWriter(fos);	//문자전송 보조스트림 (스트림->문자형변환) 
+		writer.write(str);
+		writer.flush();
+		writer.close();
 		
 		
 		FileInputStream fis = new FileInputStream("C:/Temp/test1.txt");
