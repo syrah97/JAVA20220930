@@ -12,7 +12,7 @@ public class C08Jsoup {
 	// Jsoup이란 자바라이브러리 DOM,CSS 및 J쿼리와 같은 방법을 사용하여 데이터를 추출
 	public static void main(String[] args) throws Exception {
 		// URL과 연결된 Jsoup.connection
-		Connection conn = Jsoup.connect("https://www.naver.com/");
+		Connection conn = Jsoup.connect("https://www.musinsa.com/app/");
 
 		// DOM 객체를 꺼내와 저장
 		Document document = conn.get();
@@ -39,6 +39,7 @@ public class C08Jsoup {
 
 			try {
 				if (elements.get(i).toString().contains("http")) {
+					//elements안의 i번쨰 요소에서 src속성에 해당되는 값을 추출
 					imgUrl = elements.get(i).getElementsByAttribute("src").attr("src");
 				} else if (elements.get(i).toString().contains("//")) {
 					imgUrl = "https:" + elements.get(i).getElementsByAttribute("src").attr("src");
