@@ -43,11 +43,12 @@ public class C01Prac {
 					if(tmp.contains("-1")) {	//equals 또는 contains도 가능
 						break;
 					}
-					contents+=tmp;
+					contents+=tmp+"\n";
 					
 				}
 				map.put(subject, contents);
-				contents=null;
+				contents=null;	//null로 지정해주지 않으면 그다음 내용 저장불가
+				
 				// 제목과 내용을 입력 받아서 map에 저장합니다
 				// 기존의 제목과 동일한 제목이 있으면 내용입력이 불가능하게 설정합니다
 
@@ -61,8 +62,8 @@ public class C01Prac {
 					System.out.println("제목과 일치하는 내용이 없습니다.");
 				}
 				else {
-					System.out.println("제목 : "+subject);
-					System.out.println("내용 : "+contents);
+					System.out.println("제목 : "+subject);	//제목출력
+					System.out.println("내용 : "+contents);	//내용출력
 				}
 				
 				
@@ -84,7 +85,7 @@ public class C01Prac {
 				contents = map.get(subject);
 				
 				Date now = new Date();
-				Writer out = new FileWriter("C:\\iotest\\"+subject+".txt",true);
+				Writer out = new FileWriter("C:\\iotest\\"+subject+".txt",true);	//해당제목과 동일제목의 내용을 저장
 				out.write("\n---------------"+now+"------------\n");
 				out.write(contents.substring(4));
 				out.flush();

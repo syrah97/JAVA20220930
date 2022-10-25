@@ -34,6 +34,13 @@ public class C02Prac {
 			case 1:
 				//map 에 ID/PW등록
 				//단! 기존에 동일 ID가 있으면 등록불가(containsKey사용)
+				System.out.println("ID : ");
+				id=sc.next();
+				if(map.containsKey(id)) {
+					System.out.println("동일 ID 존재합니다.");
+					break;
+				}
+				pw=sc.next();
 	
 				break;
 			case 2:
