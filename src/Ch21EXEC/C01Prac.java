@@ -2,6 +2,7 @@ package Ch21EXEC;
 
 import java.io.FileWriter;
 import java.io.Writer;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -82,7 +83,9 @@ public class C01Prac {
 				subject=sc.next();
 				contents = map.get(subject);
 				
-				Writer out = new FileWriter("C:\\iotest\\"+subject+".txt");
+				Date now = new Date();
+				Writer out = new FileWriter("C:\\iotest\\"+subject+".txt",true);
+				out.write("\n---------------"+now+"------------\n");
 				out.write(contents.substring(4));
 				out.flush();
 				out.close();
