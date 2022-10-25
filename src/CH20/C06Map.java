@@ -40,14 +40,27 @@ public class C06Map {
 		
 	}
 	
-	public static void Remove(Integer value) {
+	public static void Remove(Integer value) throws Exception {
 		// 동일한 value를 가지는 모든 요소를 삭제
-		Collection<Integer> tmp =map.values();
+		Set<String> set = map.keySet();
+		for(String key : set) {
+			if(value.equals(map.get(key))) {
+				boolean result = map.remove(key, value);
+				if(result) {
+					System.out.println("삭제 성공!!");
+					set = map.keySet();
+				}else {
+					System.out.println("삭제 실패..");
+					
+				} //if
+
+			} //if
+		}
 	}
 
 	public static void main(String[] args) {
 		Insert("aaa", 1234);
-		Insert("bbb", 2222);
+		Insert("bbb", 1234);
 		Insert("ccc", 3333);
 		Insert("ddd", 4444);
 		Insert("ddd", 1234);	//중복 key가 들어가는 경우
@@ -66,7 +79,15 @@ public class C06Map {
 		
 		//개수
 		System.out.println("저장 수 : " + map.size());
-		Remove(1234);	//value전달 삭제
+		System.out.println("-----------------------");
+		try {
+			Remove(1234);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		} //Value전달 삭제
+		
+		System.out.println("저장 수 : " + map.size());
 		
 	}
 
