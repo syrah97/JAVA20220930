@@ -31,9 +31,9 @@ public class C02Prac {
 			//수정
 			System.out.println("DB Connected...");
 			pstmt=conn.prepareStatement("update tbl_customer set name=?,addr=?,phone=? where id=?");
-			pstmt.setString(1, "SeoGilDong");
-			pstmt.setString(2, "ulsan");
-			pstmt.setString(3, "none");
+			pstmt.setString(1, "SeoGilDong!");
+			pstmt.setString(2, "ulsan!");
+			pstmt.setString(3, "none!");
 			pstmt.setInt(4, 2);
 			
 			int result = pstmt.executeUpdate();
@@ -43,7 +43,7 @@ public class C02Prac {
 				System.out.println("UPDATE 실패");
 			}
 			//삭제
-			pstmt=conn.prepareStatement("delete from tbl_customer where id=3");
+			pstmt=conn.prepareStatement("delete d from tbl_customer where id=3");
 			result = pstmt.executeUpdate();
 			if(result!=0) {
 				System.out.println("DELETE 성공");
@@ -52,10 +52,14 @@ public class C02Prac {
 			}
 			
 			conn.setAutoCommit(true);
+			//
 			
 		}catch(Exception e) {
-			try {conn.rollback();}catch(Exception e) {e.printStackTrace();}
-			e.printStackTrace();
+			try {
+				conn.rollback();
+				System.out.println("Rollback..");
+			}catch(Exception e1)
+			{e1.printStackTrace();}
 		}finally {
 			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
 			try {conn.close();}catch(Exception e) {e.printStackTrace();}
