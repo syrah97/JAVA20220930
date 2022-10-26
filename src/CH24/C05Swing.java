@@ -17,10 +17,10 @@ class C05GUI extends JFrame
 //		area.setBounds(10,10,260,240);		//스크롤 추가시 생략
 		
 		JScrollPane scroll = new JScrollPane(area);	//area에 스크롤 추가하기
-		scroll.setBounds(10,10,175,190);
+		scroll.setBounds(10,10,170,190);
 		
 		JTextField txt1 = new JTextField();	//텍스트알림창
-		txt1.setBounds(10,210,175,35);
+		txt1.setBounds(10,210,170,35);
 		
 		JButton btn1 = new JButton("버튼1");	//버튼 생성
 		btn1.setBounds(190,210,70,35);		//버튼 위치,크기 조정
