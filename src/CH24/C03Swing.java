@@ -2,8 +2,8 @@ package CH24;
 
 import javax.swing.JFrame;
 
-class C02GUI extends JFrame{
-	C02GUI() {
+class C03GUI extends JFrame{
+	C03GUI() {
 		super("두번쨰 프레임입니다.");
 		setBounds(100,100,800,600);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -11,10 +11,10 @@ class C02GUI extends JFrame{
 	}
 }
 
-public class C02Swing {
+public class C03Swing {
 
 	public static void main(String[] args) {
-		new C02GUI();
+		new C03GUI();
 		
 	}
 
