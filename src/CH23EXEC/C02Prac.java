@@ -1,11 +1,14 @@
-package CH23;
+package CH23EXEC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class C02DInsert {
+public class C02Prac {
+	
+	//tbl_customer에 id가 2인행의 name='SeoGiDong',addr='ulsan',phone='none'으로 수정하세요
+	//tbl_customer에 id가 3인행을 삭제합니다.
 
 	public static void main(String[] args) {
 		//연결관련 정보 저장용 변수
@@ -23,20 +26,35 @@ public class C02DInsert {
 			Class.forName("com.mysql.cj.jdbc.Driver");	//DB 드라이버 로드
 			System.out.println("Driver Loading Success!!");
 			conn = DriverManager.getConnection(url,id,pw);	//DB Connection 객체받기
+			
+			conn.setAutoCommit(false);
+			//수정
 			System.out.println("DB Connected...");
-			pstmt=conn.prepareStatement("insert into tbl_customer values(?,?,?,?)");
-			pstmt.setInt(1, 5);
-			pstmt.setString(2, "이지성");
-			pstmt.setString(3, "창녕");
-			pstmt.setString(4, "010-224-3333");
+			pstmt=conn.prepareStatement("update tbl_customer set name=?,addr=?,phone=? where id=?");
+			pstmt.setString(1, "SeoGilDong");
+			pstmt.setString(2, "ulsan");
+			pstmt.setString(3, "none");
+			pstmt.setInt(4, 2);
 			
 			int result = pstmt.executeUpdate();
 			if(result!=0) {
-				System.out.println("INSERT 성공");
+				System.out.println("UPDATE 성공");
 			}else {
-				System.out.println("INSERT 실패");
+				System.out.println("UPDATE 실패");
 			}
+			//삭제
+			pstmt=conn.prepareStatement("delete from tbl_customer where id=3");
+			result = pstmt.executeUpdate();
+			if(result!=0) {
+				System.out.println("DELETE 성공");
+			}else {
+				System.out.println("DELETE 실패");
+			}
+			
+			conn.setAutoCommit(true);
+			
 		}catch(Exception e) {
+			try {conn.rollback();}catch(Exception e) {e.printStackTrace();}
 			e.printStackTrace();
 		}finally {
 			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
