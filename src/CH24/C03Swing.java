@@ -1,13 +1,26 @@
 package CH24;
 
-import javax.swing.JFrame;
+import java.awt.Color;
 
-class C03GUI extends JFrame{
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+class C03GUI extends JFrame
+{
 	C03GUI() {
-		super("두번쨰 프레임입니다.");
-		setBounds(100,100,800,600);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
+		super("두번쨰 프레임입니다.");	//프레임창 제목
+		
+		JPanel pannel = new JPanel();	//패널 생성
+		
+		//배경색 지정
+		Color col = new Color(208,255,30);	//RGB(Red(0-255),Green(0-255),Blue(0-255)
+		pannel.setBackground(col);
+		
+		add(pannel);		//프레임에 패널 추가
+		
+		setBounds(100,100,800,600);	//프레임창 위치
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//종료버튼 사용가능상태
+		setVisible(true);	//프레임창 보여주기
 	}
 }
 
