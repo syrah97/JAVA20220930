@@ -1,19 +1,17 @@
 package CH24;
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.event.*;
 import javax.swing.*;
 
-class C05GUI extends JFrame implements ActionListener {
-	
+class C05GUI extends JFrame implements ActionListener, KeyListener {	//이벤트추가 명령어
+
 	JTextArea area;
 	JScrollPane scroll;
 	JTextField txt1;
 	JButton btn1;
 	JButton btn2;
-	
+
 	C05GUI() {
 		super("다섯번쨰 프레임입니다."); // 프레임창 제목
 
@@ -28,7 +26,8 @@ class C05GUI extends JFrame implements ActionListener {
 		scroll.setBounds(10, 10, 260, 240);
 
 		txt1 = new JTextField(); // 텍스트알림창
-		txt1.setBounds(10, 260, 260, 30);
+		txt1.setBounds(10, 260, 260, 30); // 위치,크기 조정
+		txt1.addKeyListener(this); //
 
 		btn1 = new JButton("버튼1"); // 버튼 생성
 		btn1.setBounds(10, 300, 120, 30); // 버튼 위치,크기 조정
@@ -59,6 +58,34 @@ class C05GUI extends JFrame implements ActionListener {
 		if (e.getSource() == btn2) {
 			System.out.println("버튼 2 클릭함");
 		}
+
+	}
+
+	// 키를 땟을때(UNICODE지원)
+	@Override
+	public void keyTyped(KeyEvent e) {
+		System.out.println("KEYTYPED함수 : " + e.getKeyChar());
+
+	}
+
+	// 키를 눌렀을때
+	@Override
+	public void keyPressed(KeyEvent e) {
+		System.out.println("KEYPRESSED함수 : " + e.getKeyChar());
+		System.out.println("KEYPRESSED함수 : " + e.getKeyCode());
+		if (e.getKeyCode() == 10) {	//엔터키입력
+			// 1 필드의 내용 -> Area
+			area.append("[ID]  "+txt1.getText()+"\n");
+			// 2 필드의 내용 삭제
+			txt1.setText("");
+		}
+
+	}
+
+	// 키를 땟을때(UNICODE미지원)
+	@Override
+	public void keyReleased(KeyEvent e) {
+		System.out.println("KEYRELEASED함수 : " + e.getKeyChar());
 
 	}
 }

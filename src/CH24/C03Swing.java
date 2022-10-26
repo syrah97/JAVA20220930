@@ -5,22 +5,21 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-class C03GUI extends JFrame
-{
+class C03GUI extends JFrame {	//아레아 생성명령어
 	C03GUI() {
-		super("세번쨰 프레임입니다.");	//프레임창 제목
-		
-		JPanel pannel = new JPanel();	//패널 생성
-		
-		//배경색 지정
-		Color col = new Color(208,255,30);	//RGB(Red(0-255),Green(0-255),Blue(0-255)
+		super("세번쨰 프레임입니다."); // 프레임창 제목
+
+		JPanel pannel = new JPanel(); // 패널 생성
+
+		// 배경색 지정
+		Color col = new Color(208, 255, 30); // RGB(Red(0-255),Green(0-255),Blue(0-255)
 		pannel.setBackground(col);
-		
-		add(pannel);		//프레임에 패널 추가
-		
-		setBounds(100,100,800,600);	//프레임창 위치
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//종료버튼 사용가능상태
-		setVisible(true);	//프레임창 보여주기
+
+		add(pannel); // 프레임에 패널 추가
+
+		setBounds(100, 100, 800, 600); // 프레임창 위치
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 종료버튼 사용가능상태
+		setVisible(true); // 프레임창 보여주기
 	}
 }
 
@@ -28,7 +27,7 @@ public class C03Swing {
 
 	public static void main(String[] args) {
 		new C03GUI();
-		
+
 	}
 
 }
