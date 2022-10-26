@@ -18,15 +18,15 @@ class C04GUI extends JFrame
 		JButton btn1 = new JButton("버튼1");	//버튼 생성
 		JButton btn2 = new JButton("버튼2");
 		
-		btn1.setBounds(10,10,120,50);		//버튼 위치,크기 조정
-		btn2.setBounds(150,10,120,50);
+		btn1.setBounds(10,280,120,30);		//버튼 위치,크기 조정
+		btn2.setBounds(150,280,120,30);
 		
 		pannel.add(btn1);
 		pannel.add(btn2);
 		
 		add(pannel);		//프레임에 패널 추가
 		
-		setBounds(100,100,800,600);	//프레임창 위치
+		setBounds(100,100,300,400);	//프레임창 위치
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//종료버튼 사용가능상태
 		setVisible(true);	//프레임창 보여주기
 	}
