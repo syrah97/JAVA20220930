@@ -33,7 +33,7 @@ public class C08Jsoup {
 //    	  String imgUrl=str[1].substring(start+1,end);
 //    	  System.out.println(imgUrl);
 
-		// 2.방법-DOM 객체 안에서 img 태그요소만 추출하는법
+		// 2.방법-DOM 객체 안에서 더 많은 img 태그요소만 추출하는법
 		String imgUrl = null;
 		for (int i = 0; i < elements.size(); i++) {
 
