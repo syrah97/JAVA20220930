@@ -1,12 +1,12 @@
-package CH24;
+package CH24EXEC;
 
 import java.awt.Color;
 
 import javax.swing.*;
 
-class C05GUI extends JFrame
+class C01GUI extends JFrame
 {
-	C05GUI() {
+	C01GUI() {
 		super("Chatting Sever");	//프레임창 제목
 		
 		JPanel pannel = new JPanel();	//패널 생성
@@ -50,10 +50,10 @@ class C05GUI extends JFrame
 	}
 }
 
-public class C05Swing {
+public class C01Prac {
 
 	public static void main(String[] args) {
-		new C05GUI();
+		new C01GUI();
 		
 	}
 
