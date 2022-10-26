@@ -7,7 +7,7 @@ import javax.swing.*;
 class C04GUI extends JFrame
 {
 	C04GUI() {
-		super("두번쨰 프레임입니다.");	//프레임창 제목
+		super("네번쨰 프레임입니다.");	//프레임창 제목
 		
 		JPanel pannel = new JPanel();	//패널 생성
 		
