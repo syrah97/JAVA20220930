@@ -7,7 +7,7 @@ import java.net.Socket;
 public class C01Client {
 
 	public static void main(String[] args) throws Exception {
-		Socket client = new Socket("192.168.3.124",5050);
+		Socket client = new Socket("192.168.3.254",5050);
 		
 		InputStream in = client.getInputStream();
 		DataInputStream Din = new DataInputStream(in);

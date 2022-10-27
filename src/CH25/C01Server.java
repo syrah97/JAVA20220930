@@ -9,15 +9,24 @@ public class C01Server {
 		
 		ServerSocket server = new ServerSocket(5050); //192.168.3.124:5050
 		System.out.println("Server Start!!..");
-		Socket client =server.accept();
 		
-		OutputStream out = client.getOutputStream();
-		DataOutputStream Dout = new DataOutputStream(out);
-		Dout.writeUTF("Server접속이 확인되었습니다.");
-		Dout.flush();
-		server.close();
-		client.close();
-
+		while(true) {
+			Socket client =server.accept();
+			System.out.println(client.getInetAddress()+"에서 접속하셨습니다.");
+			OutputStream out = client.getOutputStream();
+			DataOutputStream Dout = new DataOutputStream(out);
+			Dout.writeUTF("Server접속이 확인되었습니다.");
+			Dout.flush();
+			client.close();	
+		}
+		
+//		Socket client =server.accept();
+//		OutputStream out = client.getOutputStream();
+//		DataOutputStream Dout = new DataOutputStream(out);
+//		Dout.writeUTF("Server접속이 확인되었습니다.");
+//		Dout.flush();
+//		server.close();
+//		client.close();	
 	}
 
 }
