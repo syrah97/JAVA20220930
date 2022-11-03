@@ -13,13 +13,12 @@ public class C03DBUpdate {
 		String pw = "1234";	//DB연결 pw
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";	//연결URL(DBMS마다 상이함)
 		
-		//연결하기
+		//연결하기 try-with-resources(JAVA 7번전 이상)
 		try 
 		(
 				Connection conn = DriverManager.getConnection(url,id,pw);	//DB Connection 객체받기
 				PreparedStatement pstmt=conn.prepareStatement("update a_tbl set name=? where no=?");
-		)
-		
+		)		
 		{			
 			pstmt.setString(1, "정아무개");	//1번째 물음표, a_tbl의 name 값
 			pstmt.setInt(2, 1);				//2번째 물음표, a_tbl의 no의 값
