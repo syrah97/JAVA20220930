@@ -72,17 +72,22 @@ public class MemberDAO {
 	//멤버 수정하기
 //	boolean Update(이메일,주소,연락처) { DB 수정하기;}
 	boolean Update(MemberDTO dto) {
+		int result=0;
 		try {
 			String sql="update tbl_member set addr=?,phone=? where email=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getAddr());
 			pstmt.setString(2, dto.getPhone());
 			pstmt.setString(3, dto.getEmail());
-			int result = pstmt.executeUpdate();
+			result = pstmt.executeUpdate();
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally {
-			
+			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
+		}
+		
+		if(result>0) {
+			return true;
 		}
 		return false;
 	}
