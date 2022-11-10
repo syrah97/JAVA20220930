@@ -1,11 +1,18 @@
 package Ch38.Tests;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import Ch38.Controller.FrontController;
 import Ch38.Domain.BookDTO;
+import Ch38.Domain.LendDAO;
+import Ch38.Domain.LendDTO;
 import Ch38.Domain.MemberDAO;
 import Ch38.Domain.MemberDTO;
 import Ch38.Service.AuthService;
 import Ch38.Service.BookService;
+import Ch38.Service.LendService;
 import Ch38.Service.MemberService;
 
 public class UnitTest {
@@ -62,15 +69,54 @@ public class UnitTest {
 //			System.out.println("[VIEW] 로그인 실패..");
 //		}
 		
-		FrontController controller = new FrontController();
+//		FrontController controller = new FrontController();
+//		
+//		//서비스요청, 요청번호, DTO
+//		Integer result = (Integer)controller.ExSubController("/auth", 1, new MemberDTO("mgr1","1111"));
+//		if(result==null) {
+//			System.out.println("[VIEW] 로그인 실패..");
+//		}else {
+//			System.out.println("[VIEW]로그인 성공 ROLE : " +result);
+//		}
 		
-		//서비스요청, 요청번호, DTO
-		Integer result = (Integer)controller.ExSubController("/auth", 1, new MemberDTO("mgr1","1111"));
-		if(result==null) {
-			System.out.println("[VIEW] 로그인 실패..");
+//		LendDAO dao = LendDAO.getInstance();
+//		dao.Insert(new LendDTO(0,1010,"aaa","2022-11-10","2022-11-17"));
+		
+		//DateFormat지정 객체
+//		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+//		//날짜정보객체
+//		Calendar cal = Calendar.getInstance();
+//		//현재 날짜정보를 문자열로 저장 start
+//		String start = fmt.format(cal.getTime()).toString();
+//		System.out.println("start : " + start);
+//		//7일 이후 날짜로 등록
+//		cal.add(Calendar.DATE,7);
+//		String end = fmt.format(cal.getTime()).toString();
+//		System.out.println("end : " + end);
+		boolean Loginstate=false;
+		String userid=null;
+		Integer perm = 0;	//0 비회원, 1 회원, 2 사서(관리자)
+		//인증 서비스
+		AuthService authservice = AuthService.getInstance();
+		
+		perm = authservice.LoginCheck("aa","1111");
+		if(perm>0) {
+			Loginstate=true;
+			userid="mem1";
 		}else {
-			System.out.println("[VIEW]로그인 성공 ROLE : " +result);
+			perm=0;
 		}
+		//대여 서비스
+		LendService lendservice = LendService.getInstance();
+		
+		boolean result = lendservice.LendBook(Loginstate, perm, userid, 2020);
+		if(result) {
+			System.out.println("[VIEW] 대여성공!");
+		}else {
+			System.out.println("[VIEW] 대여실패!");
+		}
+		
+		
 		
 	}
 

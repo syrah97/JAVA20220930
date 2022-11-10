@@ -34,6 +34,7 @@ public class BookDTO extends DTO{
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
+	
 	public boolean isLend() {
 		return isLend;
 	}
