@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MemberDAO {
 	//연결 정보 저장
@@ -16,6 +19,13 @@ public class MemberDAO {
 	Connection conn = null;				//DB연결객체용 참조변수
 	PreparedStatement pstmt = null;		//SQL쿼리 전송객체용 참조변수
 	ResultSet rs =null;					//쿼리결과(Select결과)수신용 참조변수
+	
+	private static MemberDAO instance;
+	public static MemberDAO getInstance() {
+		if(instance==null);
+			instance = new MemberDAO();
+			return instance;
+	}
 	
 	MemberDAO(){
 		// CONN객체 연결
@@ -84,6 +94,7 @@ public class MemberDAO {
 			e.printStackTrace();
 		}finally {
 			try {pstmt.close();}catch(Exception e) {e.printStackTrace();}
+			
 		}
 		
 		if(result>0) {
@@ -95,6 +106,34 @@ public class MemberDAO {
 //	boolean Delete(이메일) { DB 삭제하기;}
 	//멤버 조회하기
 //	boolean Search(이메일) { DB 조회하기;}
+	
+	//전체 조회하기
+	List<MemberDTO> SearchAll(){
+		
+		List<MemberDTO> list= new ArrayList();
+		MemberDTO dto=null;
+		try {
+			pstmt = conn.prepareStatement("select * from tbl_member");
+			rs = pstmt.executeQuery();
+			if(rs!=null) {
+				while(rs.next()) {
+					dto = new MemberDTO();	//dto 객체 생성
+					dto.setNo(rs.getInt(1));	//No 저장
+					dto.setEmail(rs.getString(2));	//Email 저장
+					dto.setAddr(rs.getString(3));	//Addr 저장
+					dto.setPhone(rs.getString(4));	//Phone 저장
+					list.add(dto);
+				}
+			}
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try{rs.close();}catch(Exception e) {e.printStackTrace();}
+			try{pstmt.close();}catch(Exception e) {e.printStackTrace();}
+		}
+		return  list;
+	}
 	//멤버 수 확인하기
 	//자원 연결 해제하기
 	

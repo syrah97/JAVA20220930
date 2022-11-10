@@ -12,6 +12,7 @@ public class MemberDTO {
 		this.addr = addr;
 		this.phone = phone;
 	}
+	MemberDTO(){}
 	public int getNo() {
 		return no;
 	}
