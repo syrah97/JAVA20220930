@@ -44,6 +44,7 @@ public class LendDAO {
 		//pstmt
 		int result=0;
 		try {
+//			throw new SQLException();	//SQL 예외발생!!
 			pstmt = conn.prepareStatement("insert into tbl_Lend values(null,?,?,?,?)");
 			pstmt.setInt(1, dto.getBookcode());
 			pstmt.setString(2, dto.getMemId());
@@ -71,15 +72,17 @@ public class LendDAO {
 			pstmt.setInt(3, bdto.getBookCode());
 			result = pstmt.executeUpdate();
 
-			//tbl_lend 의 대여 정보 추가
-			pstmt = conn.prepareStatement("insert into tbl_Lend values(null,?,?,?,?)");
-			pstmt.setInt(1, ldto.getBookcode());
-			pstmt.setString(2, ldto.getMemId());
-			pstmt.setString(3, ldto.getStartDate());
-			pstmt.setString(4, ldto.getEndDate());
-			result = pstmt.executeUpdate();
+			throw new SQLException();	//SQL 예외발생!!
 			
-			conn.commit();
+			//tbl_lend 의 대여 정보 추가
+//			pstmt = conn.prepareStatement("insert into tbl_Lend values(null,?,?,?,?)");
+//			pstmt.setInt(1, ldto.getBookcode());
+//			pstmt.setString(2, ldto.getMemId());
+//			pstmt.setString(3, ldto.getStartDate());
+//			pstmt.setString(4, ldto.getEndDate());
+//			result = pstmt.executeUpdate();
+			
+//			conn.commit();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -28,6 +28,7 @@ public class UnitTest {
 //		}
 
 		// Service Tests
+
 //		BookService service = new BookService();
 //		//boolean flag = service.RegisterBook(new BookDTO(2020, "윤성우C언어"), 0); // 권한은 3이상일때만 허용하겠다! 실패..
 //		  boolean flag = service.RegisterBook(new BookDTO(2020,"윤성우C언어"), 3); //권한은 3이상일때만 허용하겠다! 성공!
@@ -36,8 +37,10 @@ public class UnitTest {
 //		}else {
 //			System.out.println("Register BOOK 실패!");
 //		}
-
+		
+		
 		//MemberDAO Tests
+		
 //		MemberDAO dao = MemberDAO.getInstance();
 //		int result = dao.Insert(new MemberDTO("mem1","1111"));
 //		if(result>0) {
@@ -47,60 +50,65 @@ public class UnitTest {
 //		}
 		
 //		FrontController controller = new FrontController();
-////		controller.ExSubController("/member", 5);
+//		//controller.ExSubController("/member", 5);
 //		//도서 등록 (메뉴,SN, 책DTO)
-//		Object obj = controller.ExSubController("/book", 1, new BookDTO(5050,"SpringFramework기본서"));
+//		Object obj = controller.ExSubController("/book", 1, new BookDTO(5050,"SpringFramwork기본서"));
 //		if(obj!=null) {
-//			System.out.println("[View]"+obj.toString());
+//			System.out.println("[View]" + obj.toString());
 //		}else {
 //			System.out.println("[View] "+obj.toString());
 //		}
 		
+
 //		MemberDAO dao = MemberDAO.getInstance();
 //		MemberDTO dto = dao.Select("mgr1");
-//		System.out.println("DTO : "+ dto);
-		
+//		System.out.println("DTO : " + dto);
+
 		
 //		AuthService service = AuthService.getInstance();
-//		Integer result = service.LoginCheck("mgr1", "1111");
-//		if(result!=null){
-//			System.out.println("[VIEW] 로그인 성공! ROLE : "+result);
+//		Integer result= service.LoginCheck("mgr1", "1111");
+//		if(result!=null) {
+//			System.out.println("[VIEW] 로그인 성공! ROLE : " + result);
 //		}else {
 //			System.out.println("[VIEW] 로그인 실패..");
 //		}
+
+		
 		
 //		FrontController controller = new FrontController();
 //		
-//		//서비스요청, 요청번호, DTO
-//		Integer result = (Integer)controller.ExSubController("/auth", 1, new MemberDTO("mgr1","1111"));
+//		//서비스요청 , 요청번호 , DTO
+//		Integer result = (Integer)controller.ExSubController("/auth", 1, new MemberDTO("mea","1111"));
 //		if(result==null) {
 //			System.out.println("[VIEW] 로그인 실패..");
 //		}else {
-//			System.out.println("[VIEW]로그인 성공 ROLE : " +result);
+//			System.out.println("[VIEW] 로그인 성공 ROLE : " + result);
 //		}
 		
-//		LendDAO dao = LendDAO.getInstance();
-//		dao.Insert(new LendDTO(0,1010,"aaa","2022-11-10","2022-11-17"));
+		//LendDAO dao = LendDAO.getInstance();
+		//dao.Insert(new LendDTO(0,1010,"aaa","2022-11-10","2022-11-17"));
 		
-		//DateFormat지정 객체
+
+
+		//DataFormat지정 객체
 //		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
 //		//날짜정보객체
 //		Calendar cal = Calendar.getInstance();
 //		//현재 날짜정보를 문자열로 저장 start
-//		String start = fmt.format(cal.getTime()).toString();
+//		String start = fmt.format(cal.getTime()).toString();		
 //		System.out.println("start : " + start);
-//		//7일 이후 날짜로 등록
-//		cal.add(Calendar.DATE,7);
-//		String end = fmt.format(cal.getTime()).toString();
-//		System.out.println("end : " + end);
+//		//7일 이후 날짜로 등록 
+//		cal.add(Calendar.DATE, 51);
+//		String end = fmt.format(cal.getTime()).toString();	
+//		System.out.println("end : " + end );
 		boolean Loginstate=false;
 		String userid=null;
-		Integer perm = 0;	//0 비회원, 1 회원, 2 사서(관리자)
+		Integer perm = 0; //0 비회원 , 1 회원 2 관리자(사서)
 		//인증 서비스
 		AuthService authservice = AuthService.getInstance();
 		
-		perm = authservice.LoginCheck("aa","1111");
-		if(perm>0) {
+		perm = authservice.LoginCheck("mem1", "1111");
+		if(perm!=null) {
 			Loginstate=true;
 			userid="mem1";
 		}else {
@@ -109,7 +117,7 @@ public class UnitTest {
 		//대여 서비스
 		LendService lendservice = LendService.getInstance();
 		
-		boolean result = lendservice.LendBook(Loginstate, perm, userid, 2020);
+		boolean result= lendservice.Lendbook(Loginstate, perm, userid, 2020);
 		if(result) {
 			System.out.println("[VIEW] 대여성공!");
 		}else {
@@ -117,6 +125,10 @@ public class UnitTest {
 		}
 		
 		
+		
+		
+		
+
 		
 	}
 
