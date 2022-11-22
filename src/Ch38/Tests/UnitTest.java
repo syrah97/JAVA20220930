@@ -1,19 +1,11 @@
 package Ch38.Tests;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.ArrayList;
 
 import Ch38.Controller.FrontController;
+import Ch38.Domain.BookDAO;
 import Ch38.Domain.BookDTO;
-import Ch38.Domain.LendDAO;
-import Ch38.Domain.LendDTO;
-import Ch38.Domain.MemberDAO;
 import Ch38.Domain.MemberDTO;
-import Ch38.Service.AuthService;
-import Ch38.Service.BookService;
-import Ch38.Service.LendService;
-import Ch38.Service.MemberService;
 
 public class UnitTest {
 
@@ -63,8 +55,8 @@ public class UnitTest {
 //		MemberDAO dao = MemberDAO.getInstance();
 //		MemberDTO dto = dao.Select("mgr1");
 //		System.out.println("DTO : " + dto);
-
-		
+//
+//		
 //		AuthService service = AuthService.getInstance();
 //		Integer result= service.LoginCheck("mgr1", "1111");
 //		if(result!=null) {
@@ -101,35 +93,87 @@ public class UnitTest {
 //		cal.add(Calendar.DATE, 51);
 //		String end = fmt.format(cal.getTime()).toString();	
 //		System.out.println("end : " + end );
+		
+		
+		
+		
+//		boolean Loginstate=false;
+//		String userid=null;
+//		Integer perm = 0; //0 비회원 , 1 회원 2 관리자(사서)
+//		//인증 서비스
+//		AuthService authservice = AuthService.getInstance();
+//		
+//		perm = authservice.LoginCheck("mem1", "1111");
+//		if(perm!=null) {
+//			Loginstate=true;
+//			userid="mem1";
+//		}else {
+//			perm=0;
+//		}
+//		//대여 서비스
+//		LendService lendservice = LendService.getInstance();
+//		
+//		boolean result= lendservice.Lendbook(Loginstate, perm, userid, 4040);
+//		if(result) {
+//			System.out.println("[VIEW] 대여성공!");
+//		}else {
+//			System.out.println("[VIEW] 대여실패!");
+//		}
+		
+		
+		//LendController Tests
+		
+		
+//		boolean Loginstate=false;
+//		String userid=null;
+//		Integer perm = 0; //0 비회원 , 1 회원 2 관리자(사서)
+//		
+//		FrontController controller=new FrontController();
+//		//1 로그인
+//		perm=(Integer)controller.ExSubController("/auth", 1, new MemberDTO("mem1","1111"));
+//		if(perm>0) {
+//			userid="mem1";
+//			Loginstate=true;
+//		}
+//		//대여하기
+//		LendDTO ldto = new LendDTO();
+//		ldto.setMemId(userid);
+//		ldto.setLogin(Loginstate);
+//		ldto.setPerm(perm);
+//		ldto.setBookcode(3030);
+//
+//		
+//		String msg=(String)controller.ExSubController("/lend", 1,ldto);
+//		System.out.println("[VIEW] " + msg);
+//		
+		
+		//로그인 이후 전체 도서 정보를 Console 화면에 출력합니다
+		
+		
 		boolean Loginstate=false;
 		String userid=null;
 		Integer perm = 0; //0 비회원 , 1 회원 2 관리자(사서)
-		//인증 서비스
-		AuthService authservice = AuthService.getInstance();
 		
-		perm = authservice.LoginCheck("mem1", "1111");
-		if(perm!=null) {
-			Loginstate=true;
+		FrontController controller=new FrontController();
+		//1 로그인
+		perm=(Integer)controller.ExSubController("/auth", 1, new MemberDTO("mem1","1111"));
+		if(perm>0) {
 			userid="mem1";
-		}else {
-			perm=0;
+			Loginstate=true;
 		}
-		//대여 서비스
-		LendService lendservice = LendService.getInstance();
-		
-		boolean result= lendservice.Lendbook(Loginstate, perm, userid, 2020);
-		if(result) {
-			System.out.println("[VIEW] 대여성공!");
-		}else {
-			System.out.println("[VIEW] 대여실패!");
+		//2 전체 도서조회
+		ArrayList<BookDTO> list = (ArrayList<BookDTO>) controller.ExSubController("/book", 5, null);
+		for(BookDTO dto : list) {
+			System.out.println(dto.toString());
 		}
 		
 		
-		
-		
-		
-
-		
+//		BookDAO dao = BookDAO.getInstance();
+//		
+//		for(int i=1;i<10;i++) {
+//			dao.Insert(new BookDTO(3000+i,"Book"+i));
+//		}
+	
 	}
 
 }

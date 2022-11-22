@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 
@@ -108,6 +109,39 @@ public class BookDAO {
 		}
 		return result;
 		
+	}
+	
+	//완성하기
+	public ArrayList<BookDTO> SelectAll() {
+
+		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
+		BookDTO dto;
+		// pstmt
+
+		try {
+			pstmt = conn.prepareStatement("select * from tbl_book");
+			rs = pstmt.executeQuery();
+			if (rs != null) {
+				while (rs.next()) {
+					dto=new BookDTO();
+					dto.setBookCode(rs.getInt("bookcode"));
+					dto.setBookName(rs.getString("bookname"));
+//					if(rs.getInt("islend")==1)
+//						dto.setLend(true);
+//					else
+//						dto.setLend(false);
+					list.add(dto);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try{rs.close();}catch(Exception e) {e.printStackTrace();}
+			try{pstmt.close();}catch(Exception e) {e.printStackTrace();}
+		}
+
+		return list;
+
 	}
 	
 	
